@@ -1,0 +1,273 @@
+PROJETO PARA GIT-HUB, SOBRE MATRIZES NÃO QUADRÁTICAS INVERSAS, E APLICAÇÕES.
+
+JUNTO COM O TEXTO, ENVIAR O CÓDIGO DE PROGRAMAÇÃO, COMO A BIBLIOTECA DE MATRIZES, COM GRAU DE SEMELHANÇA ENTRE MATRIZES, TREINAMENTO DE MATRIZES,...
+
+
+
+
+O INÍCIO: CÁLCULO DE MATRIZES INVERSAS NÃO QUADRÁTICAS:
+
+	O PROBLEMA:
+		temos uma matriz, exemplo, M[3,2],e queremos sua inversa. Isto foi para encontrar pontos 2d que levem a ponto 3d,
+		em problemas de cálculo de imagens 2D para imagens 3D.
+		
+		M[3,2]*M(-1)[2,3]=I(3), (1)
+		
+		mas há um porém: não há metodos oficiais conhecidos para se calcular a matriz inversa de uma matriz não quadrática.
+		
+		Precismos levar a equação (1) para algo que conhecemos.
+		Uma maneira é transformar M, que é não quadrática, mutiplicando por uma matriz Auxiliar que tranforme o resultado desta multiplicação para uma matriz quadrática, e então resolvemos o problema:
+		
+		Aux[2,3]*M[3,2]*M(-1)[2,3]= Aux[2,3]*I(3)
+
+		A intenção inicial era levar a multiplicação de Aux por M que levasse a uma matriz quadrática, e bola para frente, resolvendo outros problemas com a equação,
+		mas qual não foi a supresa é que a multiplicação no segundo lado da equação, também era possível!
+		
+		AuxM[2,2]*M(-1)[2,3]=Aux[2,3]*I(3),
+		
+		o lado esquerdo pode ser calculado multiplicando pela inversa de AuxM, que é uma matriz quadrática, que conhecemos como resolver,pois é uma matriz quadrátic AuxM[2,2].
+		a segunda surpresa é que multiplicar o segundo lado da equação por AuxM[2,2] também era possível!
+		
+		AuxM[2,2](-1)*AuxM[2,2]*M(-1)[2,3]=AuxM[2,2](-1)*Aux[2,3]*I(3),
+		
+		o produto de multiplicação de uma matriz quadrática pela sua inversa, é uma matriz identidade, que é uma matriz neutra para multiplicações de matrizes:
+		
+		I(2)*M(-1)[2,3]=AuxM[2,2](-1)*Aux[2,3]*I(3), 
+		retirando as matrizes Identidades, pois são elementos neutro na multiplicação de matrizes:
+		
+		M(-1)[2,3]=AuxM[2,2](-1)*Aux[2,3], levando a um cálculo sem perder teoricamente as propriedades da equação matricial inicial.
+		
+		Mas como se verá mais adiante, nem sempre uma transformação com matrizes não quadráticas leva a função bijetora, em que um único elemento
+		do conjunto do domínio, leva a um único elemento do conjunto solução.
+		
+		Outro problema é que mudando as posições da matriz não quadrãtica pela multiplicação de sua inversa, leva a sistemas impossíveis de se resolver...
+	
+
+
+			A PRIMEIRA ARMADILHA:
+				Se tivermos uma multiplicação de M por M(-1), como um exemplo:
+				
+				M[3,2]*M(-1)[2,3]=I(3),
+				
+				M(-1)[2,3]*M[3,2]=I(2)
+				
+				geramos uma matriz M(-1) com números infinitos. É um sistema de equações lineares impossível de se resolver!
+				Foi uma regra baseada na experiência, quando se tentava encontrar M(-1).
+				A explicação da regra experimental citada, é que multiplicarmos M por M(-1), geramos uma matriz [3,3]= nove elementos, e temos que resolver
+				o sistema com [2,3]= 6 variáveis, que são as variáveis de M(-1). Um sistema de equações maiores que a quantidade de variáveis,
+				teremos que repetir as variáveis para mais de 1 equação, o que é impossível de se resolver!
+				
+				PROVA DA PRIMEIRA ARMADILHA: utilização de prova de resolução de sistemas lineares.
+								---> a prova da primeira armadilha é que o mesmo problema ao tentar resolver um sistema de equações lineres.
+								Neste sistema, que pode ser descrita por matrizes, diz que se o número de variáveis for menor que o número de 
+								equações, ou que uma equação é linearmente dependente com outra ou mais equações, diz que o sistema neste
+								caso é impossível de se resolver. Com base neste teorema já provado pelos matemáticos, diz-se que a equação matricial
+								com multiplicações, tem que ter número de variáveis igual ou maior que o número de esquações do sistema linear associado.
+								
+								Para o caso que o número de variáveis não é igual, e maior que o número de equações, a solução é estimar variáveis previamente,
+								ou seja  por constantes.
+								
+				
+				EVITANDO A ARMADILHA:
+					A equação possível seria:
+					
+					M[3,2]*M(-1)[2,3]=I(3),
+					
+					a multiplicação de matrizes no lado esquerdo da equação, leva a uma matriz: [2,2]= 4 elementos, para uma quantidade de variáveis= 6 variáveis,
+					que são as variáveis de M(-1) que queremos encontrar.
+					
+			A SEGUNDA ARMADILHA:
+				Utilizando transformações com matrizes, nem sempre uma transformação é uma função bijetora, ou o Dominio(X)=Solucao(Y) não é
+				igual a Solucao(X)=Dominio(Y) ou F-1(F(X))=X,
+				Mas, novas configurações de matriz auxiliar, não com números aleatórios, mas com números inteiros, incrementados por 1, para
+				determinar cada elemento da matriz auxiliar... Nike! a matriz inversa leva a um cálculo que é bijetor. 
+				A segunda armadilha não é uma armadilha, apenas a matriz auxiliar foi inicializada com valores randomicos, com muitas casas decimais após a vírgula.
+				Setando a matriz auxiliar para números aleatórios, o problema se resolveu...
+			
+
+	
+	MENSURAÇÕES ENTRE MATRIZES/VETORES:
+		(continuar a partir daqui)
+	Com o artifício de multiplicar uma equação de matrizes, por uma matriz auxiliares, levou a um lado interessante do assunto:
+	Se conseguimos "reduzir" dimensões de uma matrizes, de tal modo que se transforme em uma matriz unidimensional, então, uma matriz
+	unidimensional pode-se mensurar sua grandeza(maior, menor, igual), permitindo também criar uma linha onde pontos da matriz unidimensional
+	pudesse ser plotados, e comparados se estão dentro de uma faixa de números, quer dizer, se os vetores forem 2d, a faixa dos limites da
+	matriz unidimensional seria a faixa de vetores 2d contidos numa área!
+
+		Expondo o problema;
+				v1=(1,5) , v2=(3,2), v1>v2 (?)
+				
+				consideremos uma igualdade entre os vetores formando uma equação de igualdade, mas poderia ser de comparação: maior, menor:
+				
+				v1[2,1]=v2[2,1] (?)
+
+				multiplicando os dois lados da equação, por uma matriz auxiliar Aux[1,2] (com elementos aleatórios, mais adiante seguem fatos
+				experimentais que a multiplicação por matrizes auxiliares, não influenciam nos cálculos):
+				
+				Aux[1,2]*v1[2,1]=vAux[1,2]*v2[2,1],
+				
+				multiplicando as matrizes nos dois lados,
+				AuxV1[1,1]=AyxV2[1,1], que permite mensurar se é maior, menor, ou iguais os vetores.
+				
+		O problema da área delimitada por vetores:
+				Se projetássemos todos vetores, os que delimitam a área e os que queremos verificar se está ou não dentro da área, projetássemos no eixo X,
+				temos o que queríamos na mensuração de vetores com matrizes auxliares. Reduzindo a dimensão é como se projetássemos no eixo X e Y
+				(para vetores 2D), e verificarmos se está dentro da faixa de projeção dos vetores delimitadores. 
+
+		Experimentalmente,no entanto, encontrou-se vetores que deveriam estar fora da área delimitada, mas os cálculos os colocou dentro da área delimitada.
+		Como relatado mais adiante, deve-se que uma transformação com matrizes, geralmente não é uma função bijetora,ou seja, para um elemento do
+		domínio encontra-se um ou mais elementos do conjunto solução, ou da solução encontra-se um ou mais elementos do domínio. É preciso um "treinamento" por 
+		erro para gerar uma matriz auxiliar que seja bijetora.
+
+
+
+
+	O GRAU DE SEMELHANÇA ENTRE MATRIZES/VETORES. UMA APLICAÇÃO DA REDUÇÃO DE DIMENSÕES COM USO DE MATRIZES AUXILIARES:
+	(a escrever a partir daqui).
+	
+		A idéia de multiplicar uma matriz auxiliar uma equação com matrizes, e diminuindo as dimensões das matrizes para [1,1], não só,
+		possibilita poder calcular matrizez não quadráticas inversas, como podemos mensurar matrizes, e determinar o quão semelhante  
+		uma matriz é em relação a outra matriz, com precisão medida em porcentagens
+		Essa mensuração é o grau de semelhança de matrizes, vetores (que são um caso particular de matriz).
+		Veja:
+			M1[2,3]=M2[2,3] (?)
+			Aux1[1,2]*M1[2,3]*Aux2[3,1]=Aux1[1,2]*M2[2,3]*Aux2[3,1],
+			
+			Aux1M1Aux2[1,1]=Aux1M2Aux2[1,1],
+			N1=Aux1M1Aux2, N2=Aux1M2Aux2
+			g=N1/N2. (grau de semelhança).
+			
+			o grau de semelhança vem da equação acima, como o quanto em porcentagem N1 é para N2, por exemplo: N1=1, N2=2, pode-se dizer que N1 é 50% de N2.
+			Como se verá mais adiante, o uso de matrizes auxiliares, não influencia muito para o cálculo do grau de semelhança, Foram utilizadas diferentes 
+			matrizes Auxliares, e no caso do grau de precisão para matrizes, o grau de precisão não foi alterado, com uma precisão de 3 casas decimais após a vírgula.
+			
+			O grau de semelhança permite mensurar o quanto uma entrada encontrada é semelhante à saída esperada, reconhecendo padrões, como imagens de um objeto, ou caligrafia,
+			tão somente calculando o grau de semelhança e verificando a porcentagem do grau.
+			
+			
+			Em uma experiencia com imagens, temos uma imagem de entrada, conseguir uma imagem de entrada rotacionada, o cálculo do grau de semelhança
+			da imagem rotacionada, em relação a imagem de entrada, alcançou uma porcentagem de semelhança de ~90%.
+			Em outro experimento com imagens, utilizando imagens completamente diferentes, o grau de semelhança foi de ~40%. 
+			
+			
+	
+	UMA AI COM MATRIZES, E TREINAMENTO PELO GRAU DE SEMELHANÇA:
+
+	uma matriz com pesos, pode levar uma entrada a uma saída, o mais próximo possível.
+	O indicador para o progresso do treinamento é o grau de semelhança de matrizes/vetores.
+	multiplicando os dois lados da equação que representa a transformação por matrizes:
+	
+		E[n,m]*M[m,k]= S[n,k]
+		
+		E: entrada do sistema.
+		S: saída do sistema.
+		
+		Multiplicando os dois lados da equação, por matrizes auxiliares:
+		
+		Aux1[1,n]*E[n,m]*M[m,k]*Aux2[k,1]= Aux1[1,n]*S[n,k]*Aux2[k,1],
+		
+		temos nos dois lados matrizes unidimensionais, em que podemos mensurar (maior, menor, igual, o quão semelhante são):
+		
+		Aux1EAux2[1,1]=Aux1SAux2[1,1]
+		
+		se quisermos encontrar o quanto semelhante é o lado esquerdo da equação, em relação ao lado direito da equação, é:
+		(por exemplo: E=1, S=2, podemos dizer que a entrada E é 50% da saída S, pois E/S=1/2=0.5 ou 50%)
+		
+		g=Aux1EAux2[1,1]/Aux1SAux2[1,1]
+		
+		
+		mensurando com o grau de semelhança, podemos treinar a matriz, para que gere valores tais que a entrada seja o mais próximo possível:
+		(E[n,m](-1))*E[n,m]*M[m,k]=(E[n,m](-1))*S[n,k],
+		
+		uma matriz inversa não quadrática, é conseguida como E_inv[n,m]*E[m,n]=I(n), ou seja uma matriz não quadrática inversa tem linhas e colunas trocadas
+		em relação a matriz não quadrática de entrada, por que? Porque multiplicando uma matriz pela sua inversa resulta em uma matriz identidade,
+		então para conseguirmos uma matriz identidade a partr de uma multiplicação de matrizes, M[n,m], M(-1) tem que ser necessáriamente M(-1)[m,n], para
+		gerar a matriz identidade I(n):
+		
+		simplificando a equação, multiplicando matrizes pela sua inversa, gerando matrizes identidades:
+		
+		M[m,k]=(E(-1)[m,n])*S[n,k],
+		
+		e assim treinamos a matriz para levar a entrada para ser igual a saída.
+		Um fato interessante é que pelo grau de semelhança de matrizes, podemos mensurar o quanto uma matriz de entrada é em porcentagem, semelhante
+		à matriz de saída! É um paraíso para reconhecimento de padrões.
+		
+		Mas Extendendo o treinamento:
+			Se tivermos X Entradas, podemos observar que a matriz treinada deverá ser igual para todos treinamentos com as X entradas:
+			
+			E(1)[n,m]*M[m,k]= S[n,k]
+			E(2)[n,m]*M[m,k]= S[n,k]
+			E(3)[n,m]*M[m,k]= S[n,k]
+			...
+			E(X)[n,m]*M[m,k]=S[n,k],
+			
+			como conseguimos a matriz N[m,k]? Somamos todas equações:
+			
+			(E(1)+E(2)+E(3)+...+E(x))*M[m,k]= (x)*S[n,k],
+			
+			calculando a matriz inversa da somatória de entradas:
+			
+			(E(1)+E(2)+E(3)+...+E(x))*M[m,k]= (x)*S[n,k]
+			[((E(1)+E(2)+E(3)+...+E(x))(-1)]*(E(1)+E(2)+E(3)+...+E(x))*M[m,k]= [((E(1)+E(2)+E(3)+...+E(x))(-1)]*(x)*S[n,k],
+			resolvendo multiplicações no lado esquerdo:
+			 M[m,k]=[((E(1)+E(2)+E(3)+...+E(x))(-1)]*(x)*S[n,k],
+			 
+			 encontramos uma matriz[m,k] que leva a um mesmo resultado para todas entradas.
+			 
+			 
+				
+				
+			APLICAÇÃO DE SEMELHANÇA ENTRE MATRIZES/VETORES NA TEORIA DOS JOGOS:
+			
+				O reconhecimento até mesmo preciso do grau de semelhança entre matrizes/ ou entre vetores, pode ser aplicado na teoria dos jogos:
+				Modelando um sistema em que a Entrada seja um vetor de indicadores, e a Saida um vetor dos mesmos indicadores, representando
+				o objetivo do jogado, pode-se calcular, entre as jogadas possíveis no estado atual do jogo, qual a que melhor aproxima a jogada do jogador
+				em relação aos seus objetivos.
+					
+				Exemplos: No jogo de xadres, o número de jogadas possiveis para um jogador, NÃO É TODAS JOGADAS POSSÍVEIS NO JOGO, que é um valor extratosférico,
+				mas sim no máximo 16 jogadas, que são os movimentos das 16 peças iniciais do jogador. Outro ponto interessante é que o jogador deve setar
+				seu objetivo, como o número de peças do jogador adversário, ou determinada configuração das peças no tabuleiro. Pode ser também um mínimo número
+				de perdas de peças do jogador, para o adversário. É meio abstrato ainda, mas o reconhecimento de semelhança de vetores de indicadores,
+				quando setado o objetivo, sempre apontará qual o melhor movimento para atingir o objetivo.
+						
+				O esboço do mecanismo de grau de semelhança é como segue:
+				
+					Jogadas J1, J2, J3,  e objetivo O1:
+					
+					aplicando o grau de semelhança entre (J1,O1), (J2,O1), e (J3,O1), resultado em g1=0.5, g2=0,6, g3=0.7, a jogada
+					J3 está mais próximo para cumprir o objetivo deste jogador.
+				Sabendo indicadores, e um objetivo, o cálculo é direto, e determinado até a porcentagem em relação ao objetivo, que as jogadas do jogador está
+				para alcançar ele...
+
+					As jogadas podem ser representada por matrizes/ ou por vetores, não importa, o resultado é calculado utilizando o mesmo embasamento.
+					
+					lembrando o cálculo do grau de semelhança:
+					
+					Aux1[1,n]*J(x)[n,1]=Aux1[1,n]*O[n,1]   
+				
+					J(X)= jogada de número X do jogador;
+					O: objetivo do jogador
+					
+					g=Aux1[1,n]*J(x)[n,1]/Aux1[1,n]*O[n,1],
+					ou g= um vetor[1,1], o que permite mensurar a porcentagem o quanto J(x) está para alcançar O.
+				
+					Outro exemplo vem do jogo de tabuleiro War I. Trata-se de objetivos de conquista de países, continentes, com unidades formando exércitos.
+					Os indicadores podem ser modelados como: determinado país a ser conquistado: indicdor X pontos, continentes inteiros ou maioria: indicador Y pontos,
+					caminho para ir de um país até o país a ser conquistado: modelador N-len(path).
+					De posse destes indicadores, a AI pode jogar visando um objetivo. O interessante é que o objetivo de um jogador 1 pode ser diferente do objetivo do jogador 2.
+				
+					Em testes, muitas vezes encontramos valores de grau >1.0, e então, a teoria quebrou?
+				    Valores maiores que 1.0 (100%), nos diz que os resultados atingiram o objetivo, e foi mais adiante: como jogada1=3, objetivo=1, n1 é 300% do objetivo.
+		
+				
+					
+			A INDEPENDÊNCIA DO GRAU DE SEMELHANÇA EM RELAÇÃO À MULTIPLICAÇÃO POR MATRIZES AUXILIARES:
+			
+				Utilizar matrizes auxiliares afetam o cálculo do grau de semelhança?
+				Resolvendo fazer um experimento, construi dois graus de semelhança, para as mesmas matrizes de encontrado/ e de experado, mas
+				utilizando matrizes auxiliares diferentes.
+			
+			O resultado foi uma precisão de 3 dígitos decimais após a vírgula, para matrizes, e 6 dígito decimais após a vírgula, do cálculo
+			de g (grau de semelhança).
+			Outra parte do experimento é interessante, setar uma matriz auxiliar dos mesmos números, mas multiplicado por uma constante todos elementos.
+			A precisão entre os dois cálculos de g foi total: todos dígitos decimais após a vírgula!

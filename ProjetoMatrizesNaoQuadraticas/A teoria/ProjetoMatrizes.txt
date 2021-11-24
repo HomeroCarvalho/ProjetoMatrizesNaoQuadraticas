@@ -1,0 +1,30 @@
+PROJETO MATRIZES NÃO QUADRÁTICAS:
+	
+	Este projeto destina-se a propagar o conhecimento adquirido anteriormente, sobre estudos de matrizes não quadráticas, e abrange:
+	(todo conhecimento já foi produzido, é meramente uma publicação), a ser postado no GitHub, POR CAUSA DO CODIGO DOS ALGORITMOS IMPLÍCITOS:
+
+
+
+	1- cálculo de uma matriz inversa não quadrática; (escrito)
+	2- aplicação da matrizes inversas não quadrática: treinamento AI para reconhecimento de padrões
+		2.1- reconhecimento de padrões com utilização do grau de semelhança entre matrizes/vetores.
+
+	2- cálculo de uma função bijetora redutora-aumentadora de matrizes (uma transformação com matrizes, não levam necessariamente a uma função bijetora); (escrito)
+	3- mensurações vetoriais (maior, menor, igual);
+
+
+	4- o conceito de grau de semelhança de matrizes, e vetores;
+	5- aplicar o grau de semelhança em matrizes/vetores que descrevem um jogo;
+	6- considerações da independência da mensuração do grau de semelhança, do cálculo com matrizes auxiliares;
+
+
+
+
+		
+
+
+
+
+
+
+
