@@ -1,0 +1,276 @@
+
+
+Time: 24/09/2021 22:06:09  Message: teste passou.
+
+
+Time: 24/09/2021 22:06:09  Message: teste: Teste1 executado em: -371milisegundos.
+
+
+Time: 24/09/2021 22:06:09  Message: teste: Teste1 executado sem erros fatais.
+
+
+Time: 24/09/2021 22:06:29  Message: teste passou.
+
+
+Time: 24/09/2021 22:06:29  Message: teste: Teste1 executado em: 150milisegundos.
+
+
+Time: 24/09/2021 22:06:29  Message: teste: Teste1 executado sem erros fatais.
+
+
+Time: 24/09/2021 22:06:42  Message: teste: Teste2 executado em: -23milisegundos.
+
+
+Time: 24/09/2021 22:06:42  Message: teste: Teste2 executado sem erros fatais.
+
+
+Time: 25/09/2021 02:53:55  Message: teste passou.
+
+
+Time: 25/09/2021 02:53:55  Message: teste: Teste1 executado em: -1milisegundos.
+
+
+Time: 25/09/2021 02:53:55  Message: teste: Teste1 executado sem erros fatais.
+
+
+Time: 25/09/2021 02:54:03  Message: teste: Teste2 executado em: 173milisegundos.
+
+
+Time: 25/09/2021 02:54:03  Message: teste: Teste2 executado sem erros fatais.
+
+
+Time: 25/09/2021 02:54:18  Message: teste passou.
+
+
+Time: 25/09/2021 02:54:18  Message: teste: Teste1 executado em: 201milisegundos.
+
+
+Time: 25/09/2021 02:54:18  Message: teste: Teste1 executado sem erros fatais.
+
+
+Time: 25/09/2021 02:54:28  Message: teste: Teste2 executado em: 619milisegundos.
+
+
+Time: 25/09/2021 02:54:28  Message: teste: Teste2 executado sem erros fatais.
+
+
+Time: 25/09/2021 02:54:49  Message: teste passou.
+
+
+Time: 25/09/2021 02:54:49  Message: teste: Teste1 executado em: 572milisegundos.
+
+
+Time: 25/09/2021 02:54:49  Message: teste: Teste1 executado sem erros fatais.
+
+
+Time: 25/09/2021 02:55:00  Message: teste: Teste2 executado em: -415milisegundos.
+
+
+Time: 25/09/2021 02:55:00  Message: teste: Teste2 executado sem erros fatais.
+
+
+Time: 01/10/2021 01:24:19  Message: teste passou.
+
+
+Time: 01/10/2021 01:24:19  Message: teste: Teste1 executado em: 205milisegundos.
+
+
+Time: 01/10/2021 01:24:19  Message: teste: Teste1 executado sem erros fatais.
+
+
+Time: 01/10/2021 01:26:57  Message: teste passou.
+
+
+Time: 01/10/2021 01:26:57  Message: teste: Teste1 executado em: 246milisegundos.
+
+
+Time: 01/10/2021 01:26:57  Message: teste: Teste1 executado sem erros fatais.
+
+
+Time: 01/10/2021 01:28:08  Message: teste passou.
+
+
+Time: 01/10/2021 01:28:08  Message: teste: Teste1 executado em: -892milisegundos.
+
+
+Time: 01/10/2021 01:28:08  Message: teste: Teste1 executado sem erros fatais.
+
+
+Time: 01/10/2021 01:28:16  Message: teste: Teste3 executado em: 567milisegundos.
+
+
+Time: 01/10/2021 01:28:16  Message: teste: Teste3 executado sem erros fatais.
+
+
+Time: 01/10/2021 01:30:15  Message: teste passou.
+
+
+Time: 01/10/2021 01:30:15  Message: teste: Teste1 executado em: 88milisegundos.
+
+
+Time: 01/10/2021 01:30:15  Message: teste: Teste1 executado sem erros fatais.
+
+
+Time: 01/10/2021 01:30:17  Message: teste: Teste3 executado em: 428milisegundos.
+
+
+Time: 01/10/2021 01:30:17  Message: teste: Teste3 executado sem erros fatais.
+
+
+Time: 01/10/2021 01:30:21  Message: teste: Teste2 executado em: -249milisegundos.
+
+
+Time: 01/10/2021 01:30:21  Message: teste: Teste2 executado sem erros fatais.
+
+
+Time: 01/10/2021 01:34:32  Message: teste passou.
+
+
+Time: 01/10/2021 01:34:32  Message: teste: Teste1 executado em: -328milisegundos.
+
+
+Time: 01/10/2021 01:34:32  Message: teste: Teste1 executado sem erros fatais.
+
+
+Time: 01/10/2021 01:34:44  Message: teste: Teste3 executado em: 72milisegundos.
+
+
+Time: 01/10/2021 01:34:44  Message: teste: Teste3 executado sem erros fatais.
+
+
+Time: 01/10/2021 01:34:49  Message: teste: Teste2 executado em: -317milisegundos.
+
+
+Time: 01/10/2021 01:34:49  Message: teste: Teste2 executado sem erros fatais.
+
+
+Time: 01/10/2021 01:36:08  Message: teste passou.
+
+
+Time: 01/10/2021 01:36:08  Message: teste: Teste1 executado em: -353milisegundos.
+
+
+Time: 01/10/2021 01:36:08  Message: teste: Teste1 executado sem erros fatais.
+
+
+Time: 01/10/2021 01:36:22  Message: teste: Teste3 executado em: 7milisegundos.
+
+
+Time: 01/10/2021 01:36:22  Message: teste: Teste3 executado sem erros fatais.
+
+
+Time: 01/10/2021 01:36:24  Message: teste: Teste2 executado em: 653milisegundos.
+
+
+Time: 01/10/2021 01:36:24  Message: teste: Teste2 executado sem erros fatais.
+
+
+Time: 01/10/2021 01:40:10  Message: teste passou.
+
+
+Time: 01/10/2021 01:40:10  Message: teste: Teste1 executado em: 0milisegundos.
+
+
+Time: 01/10/2021 01:40:12  Message: teste: Teste3 executado em: 0milisegundos.
+
+
+Time: 01/10/2021 01:40:13  Message: teste: Teste2 executado em: 0milisegundos.
+
+
+Time: 01/10/2021 01:43:26  Message: teste passou.
+
+
+Time: 01/10/2021 01:43:26  Message: teste: Teste1 executado em: 1951milisegundos.
+
+
+Time: 01/10/2021 01:43:28  Message: teste: Teste3 executado em: 1818milisegundos.
+
+
+Time: 01/10/2021 01:43:29  Message: teste: Teste2 executado em: 1761milisegundos.
+
+
+Time: 01/10/2021 01:47:10  Message: teste passou.
+
+
+Time: 01/10/2021 01:47:10  Message: teste: Teste1 executado em: 809  milisegundos.
+
+
+Time: 01/10/2021 01:47:12  Message: teste: Teste3 executado em: 1462  milisegundos.
+
+
+Time: 01/10/2021 01:47:12  Message: teste: Teste2 executado em: 771  milisegundos.
+
+
+Time: 01/10/2021 01:47:42  Message: teste passou.
+
+
+Time: 01/10/2021 01:47:42  Message: teste: Teste1 executado em: 848  milisegundos.
+
+
+Time: 01/10/2021 01:47:42  Message: teste: Teste3 executado em: 648  milisegundos.
+
+
+Time: 01/10/2021 01:47:47  Message: teste: Teste2 executado em: 4803  milisegundos.
+
+
+Time: 01/10/2021 01:49:51  Message: teste passou.
+
+
+Time: 01/10/2021 01:49:51  Message: teste: Teste1 executado em: 1065  milisegundos.
+
+
+Time: 01/10/2021 01:49:55  Message: teste: Teste3 executado em: 4226  milisegundos.
+
+
+Time: 01/10/2021 01:49:56  Message: teste: Teste2 executado em: 896  milisegundos.
+
+
+Time: 16/11/2021 16:18:50  Message: teste passou.
+
+
+Time: 16/11/2021 16:18:50  Message: teste: Teste1 executado em: 15463  milisegundos.
+
+
+Time: 16/11/2021 16:19:02  Message: teste: Teste3 executado em: 12011  milisegundos.
+
+
+Time: 16/11/2021 16:19:11  Message: teste: Teste2 executado em: 9553  milisegundos.
+
+
+Time: 16/11/2021 16:37:13  Message: teste passou.
+
+
+Time: 16/11/2021 16:37:13  Message: teste: Teste1 executado em: 2684  milisegundos.
+
+
+Time: 16/11/2021 16:39:46  Message: teste passou.
+
+
+Time: 16/11/2021 16:39:46  Message: teste: Teste1 executado em: 26354  milisegundos.
+
+
+Time: 17/11/2021 17:25:09  Message: teste: Teste1_1 executado em: 18194  milisegundos.
+
+
+Time: 17/11/2021 17:25:28  Message: teste: Teste1 executado em: 18925  milisegundos.
+
+
+Time: 17/11/2021 17:25:32  Message: teste passou.
+
+
+Time: 17/11/2021 17:25:32  Message: teste: Teste2 executado em: 3720  milisegundos.
+
+
+Time: 17/11/2021 17:25:35  Message: teste: Teste3 executado em: 2896  milisegundos.
+
+
+Time: 17/11/2021 17:25:38  Message: teste: Teste4 executado em: 3054  milisegundos.
+
+
+Time: 21/11/2021 08:15:46  Message: teste: Teste1_2 executado em: 73303  milisegundos.
+
+
+Time: 21/11/2021 11:04:11  Message: teste: Teste1_2, na classe: Testes gerou excecao que interrompeu o seu processamento. falha porque: Exception has been thrown by the target of an invocation., Stack:    at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at Testes.SuiteClasseTestes.ExecutaTestes()

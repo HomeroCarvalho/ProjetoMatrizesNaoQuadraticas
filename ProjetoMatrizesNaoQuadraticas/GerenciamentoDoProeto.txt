@@ -1,0 +1,81 @@
+﻿PROJETO MATRIZES NAO QUADRATICAS
+
+	---> todos arquivo de codigo Matrizes.cs foi APAGADO, e regrediu para um código anterior,
+	incompleto, e sem os cálculos de matrizes inversas, e grau de semelhança entre matrizes.
+
+	---> este projeto é um demonstrativo da teoria de matrizes não quadráticas inversas, disponibilizado
+	no arquivo texto deste repositório.
+
+	Estimativa do Projeto: 3 semanas, com prioridade baixo.
+________________________________________________________________________________________________________________________________
+	PRODUTO BACKLOG:
+			
+			----> CONSTRUÇÃO DE UMA CLASSE MATRIZ.
+			----> MÉTODOS: InversaNaoQuadratica, GrauDeSemelhanca, FuncaoBijetoraNaoQuadratica.
+
+			----> se porventura houver mais métodos a serem implementados, serão descritos como mudança.
+
+________________________________________________________________________________________________________________________________
+Daily Scrum 23.09:
+	Atividades Realizadas:
+			----> construcao da classe Matrizes.
+			----> codificação de métodos InversaNaoQuadratica, GrauDeSemelhanca.
+
+________________________________________________________________________________________________________________________________
+Daily Scrum 24.09:
+	Atividades Realizadas:
+			----> testes de matrizes inversas.
+						---> testes para matriz inversa, obteve êxito, calculou uma matriz inversa não quadrática sem números infinitos, ou 0.
+						---> testes para grau de semelhança, calculou o grau, mas as matrizes tem elementos muito semelhantes.
+									----> testes com matrizes menos semelhanças, com elementos menos semelhantes, calculou o grau.
+
+_________________________________________________________________________________________________________________________________
+Daily Scrum 30.09:
+	Atividades Realizadas:
+			
+			---> codificação de matriz de transformação bijetora.
+			---> codificacao de cenario de testes com matriz bijetora.
+					----> calculo de matriz bijetora feita com valores de numeros reais.
+
+					----> testes, falha no cálculo bijetora aplicada em vetores. Quanto maior o treinamento,
+					mais a matriz bijetora se aproxima da matriz inicial.
+							----> Nike! com uma matriz auxiliar sem numeros randomicos, e com numeros inteiros,
+							chegou-se a resultados em que o vetor 3d inicial = vetor 3d final, ou seja a matriz inicial é matriz bijetora, sem treinamentos...
+							Nesse relato há que se dizer: muitas vezes, os resultados foram adulterados... Por quem? Não sei, mas dados do treinamento,
+							e grau de semelhança, foram deletados? Por quem, novamente? Não sei...
+
+
+___________________________________________________________________________________________________________________________________________________________________________________________
+Daily Scrum 17.11:
+	Atividades Realizadas:
+				
+				---> (codificado, testado) codificacao da classe TransformacaoIsometricaNaoQuadratica. 
+				---> testes para obter "pontos 2d a partir de pontos 3d", e "pontos 3d a partir de pontos 2d".
+							----> falha na transformacao 3d-->2d-->3d.
+
+							----> no entanto, o calculo de transformacao 2d-->3d-->2d resultou o esperado.
+										----> pode ser util no calculo de Objeto3d.BuildImage().
+										----> util tambem no calculo de ponto 3d a partir da posicao do mouse.
+
+							----> o que nao dá para entender é a falha no metodo Objeto3d.BuildImage(), com
+							TransformacaoIsometricaNaoQuadratica: os pontos 3d calculados estão diferenciados....
+
+
+				
+___________________________________________________________________________________________________________________________________________________________________________________________
+Daily Scrum 21.11:
+	Atividades Realizadas:
+				-----> A VALIDAÇÃO DO CENÁRIO DE TESTE, UTLIZANDO o vetor 3d (1,2,3), justamente somente este vetor,
+				validou a teoria, mas ao utilizar outros vetores, resultou na imprecisão dos calculos para 3d-->2d-->3d...
+			
+				-----> há uma diferença no calculo de m32*m23, que gera uma matriz que nao é identidade.
+				a matriz m23*m32 resultou em matriz identidade.
+
+
+				----> a boas notícias é que, a matriz m32*m23, apesar de não resultrar em matriz identidade,
+				é inversível!, então uma transformacao 3d-->2d-->3d, pode ser feita, se mudarmos de base para a (m32*m23).Inversa(),
+				numa transformacao 2d-->3d, processamento final de 3d-->2d-->3d.
+
+
+
+____________________________________________________________________________________________________________________________________________________________________________________________________
