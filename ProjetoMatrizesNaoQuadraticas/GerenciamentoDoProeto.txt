@@ -77,5 +77,8 @@ Daily Scrum 21.11:
 				numa transformacao 2d-->3d, processamento final de 3d-->2d-->3d.
 
 
+				----> por erro da bilioteca matemática, a matriz m32*m23 não é inversível, mas há chance de fazer o cálculo,
+				se for utilizado o método para resolução de sistemas lineares impossível de se resolver, descrito neste mesmo projeto.
+
 
 ____________________________________________________________________________________________________________________________________________________________________________________________________
