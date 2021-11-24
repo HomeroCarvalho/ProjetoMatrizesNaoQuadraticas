@@ -6,7 +6,7 @@ Discute também o emprego do artifício matemático na solução de matrizes inv
 equações, como sistemas lineares impossível de se resolver.
 
 Mas há boas notícias! Como o vetor escolhido anteriormente, resultou na validação (o vetor 3d: (1,2,3)),
-e outros vetores com intervalos entre os elementos do vetor, diferente do vetor (1,2,3), resolvi checar
+e outros vetores não, com intervalos diferentes entre os elementos do vetor, diferente do vetor (1,2,3), resolvi checar
 se os intervalos dos elementos da matriz auxiliar, fosse arranjado tal que fosse igual aos intervalos de
 um outro vetor, (3,6,9). Resultado: uma validação na transformação 3d-->2d-->3d, que era a transformação
 faltante para transformações isométricas como função bijetora. A transformação 2d-->3d-->2d já era bijetora.
