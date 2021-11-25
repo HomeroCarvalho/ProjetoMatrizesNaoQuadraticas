@@ -1,0 +1,187 @@
+﻿PROJETO MATRIZES NAO QUADRATICAS
+
+	---> todos arquivo de codigo Matrizes.cs foi APAGADO, e regrediu para um código anterior,
+	incompleto, e sem os cálculos de matrizes inversas, e grau de semelhança entre matrizes.
+
+	---> este projeto é um demonstrativo da teoria de matrizes não quadráticas inversas, disponibilizado
+	no arquivo texto deste repositório.
+
+	Estimativa do Projeto: 3 semanas, com prioridade baixo.
+________________________________________________________________________________________________________________________________
+	PRODUTO BACKLOG:
+			
+			----> CONSTRUÇÃO DE UMA CLASSE MATRIZ.
+			----> MÉTODOS: InversaNaoQuadratica, GrauDeSemelhanca, FuncaoBijetoraNaoQuadratica.
+
+			----> se porventura houver mais métodos a serem implementados, serão descritos como mudança.
+
+________________________________________________________________________________________________________________________________
+Daily Scrum 23.09:
+	Atividades Realizadas:
+			----> construcao da classe Matrizes.
+			----> codificação de métodos InversaNaoQuadratica, GrauDeSemelhanca.
+
+________________________________________________________________________________________________________________________________
+Daily Scrum 24.09:
+	Atividades Realizadas:
+			----> testes de matrizes inversas.
+						---> testes para matriz inversa, obteve êxito, calculou uma matriz inversa não quadrática sem números infinitos, ou 0.
+						---> testes para grau de semelhança, calculou o grau, mas as matrizes tem elementos muito semelhantes.
+									----> testes com matrizes menos semelhanças, com elementos menos semelhantes, calculou o grau.
+
+_________________________________________________________________________________________________________________________________
+Daily Scrum 30.09:
+	Atividades Realizadas:
+			
+			---> codificação de matriz de transformação bijetora.
+			---> codificacao de cenario de testes com matriz bijetora.
+					----> calculo de matriz bijetora feita com valores de numeros reais.
+
+					----> testes, falha no cálculo bijetora aplicada em vetores. Quanto maior o treinamento,
+					mais a matriz bijetora se aproxima da matriz inicial.
+							----> Nike! com uma matriz auxiliar sem numeros randomicos, e com numeros inteiros,
+							chegou-se a resultados em que o vetor 3d inicial = vetor 3d final, ou seja a matriz inicial é matriz bijetora, sem treinamentos...
+							Nesse relato há que se dizer: muitas vezes, os resultados foram adulterados... Por quem? Não sei, mas dados do treinamento,
+							e grau de semelhança, foram deletados? Por quem, novamente? Não sei...
+
+
+___________________________________________________________________________________________________________________________________________________________________________________________
+Daily Scrum 17.11:
+	Atividades Realizadas:
+				
+				---> (codificado, testado) codificacao da classe TransformacaoIsometricaNaoQuadratica. 
+				---> testes para obter "pontos 2d a partir de pontos 3d", e "pontos 3d a partir de pontos 2d".
+							----> falha na transformacao 3d-->2d-->3d.
+
+							----> no entanto, o calculo de transformacao 2d-->3d-->2d resultou o esperado.
+										----> pode ser util no calculo de Objeto3d.BuildImage().
+										----> util tambem no calculo de ponto 3d a partir da posicao do mouse.
+
+							----> o que nao dá para entender é a falha no metodo Objeto3d.BuildImage(), com
+							TransformacaoIsometricaNaoQuadratica: os pontos 3d calculados estão diferenciados....
+
+
+				
+___________________________________________________________________________________________________________________________________________________________________________________________
+Daily Scrum 21.11:
+	Atividades Realizadas:
+				-----> A VALIDAÇÃO DO CENÁRIO DE TESTE, UTLIZANDO o vetor 3d (1,2,3), justamente somente este vetor,
+				validou a teoria, mas ao utilizar outros vetores, resultou na imprecisão dos calculos para 3d-->2d-->3d...
+			
+				-----> há uma diferença no calculo de m32*m23, que gera uma matriz que nao é identidade.
+				a matriz m23*m32 resultou em matriz identidade.
+
+
+				----> para intervalos entre elementos do vetor de entrada, é possível ajustar a matriz auxiliar,
+				relatos de validação, para matriz auxiliar ajustada para conter elementos com igual intervalo de elementos,
+				que a maior diferença entre elementosdo vetor de entrada..
+____________________________________________________________________________________________________________________________________________________________________________________________________
+Daily Scrum 25.11:
+
+				----> para intervalos entre elementos do vetor de entrada, é possível ajustar a matriz auxiliar,
+				relatos de validação, para matriz auxiliar ajustada para conter elementos com igual intervalo de elementos,
+				que a maior diferença entre elementosdo vetor de entrada..
+
+				----> substituição da biblioteca matemática, mas falha nos cálculos de transformação 3d-->2d-->3d.
+
+				----> COMPREENSÃO DO PROBLEMA DA MATRIZ IDENTIDADE I3, em M32*M23=I(3).
+						----> a matriz identidade nesta equação não é possível calcular, pois
+						no lado esquerdo da equação há seis elementos, e 9 equações de elementos,
+						faltando pois, +3 elementos para o cálculo da matriz identidade, vindo de [M32*M23]*[M32*M23(-1)].
+
+						A solução é acrescentar mais 3 elementos para que o número de variáveis= número de equações de elementos.
+
+						um artifício é somar uma matriz quadrática cuja inversa exista.
+
+
+
+						M32*M23=I3.
+
+						M33=I3
+						M33*M33(-1)=I3,
+
+						M33(-1) não existe, MAS supondo que exista,
+
+						D3= matriz com diagonal secundária < 0, resultando numa matriz inversa que existe, o determinante: det(D3)<>0.
+
+						somando nos dois lados da equação por M33(-1)*D3,
+
+						M33(-1)*D3+ M33*M33(-1)=M33(-1)*D3+ I3,
+
+						M33(-1)*[D3+M33]=M33(-1)*D3+ I3,
+
+						multiplicando os dois lados da equação por [D3+M33](-1)
+
+
+						M33(-1)*[D3+M33]*[D3+M33](-1)=[M33(-1)*D3+ I3]*[D3+M33](-1)
+
+						seja [D3+M33](-1)=k, e existe, pois a matriz diagonal secundária garante um determinante de matriz identidade <> 0,
+						
+						e [D3+M33]*[D3+M33](-1)=I3,
+
+
+						
+						M33(-1)*I3= [M33(-1)*D3+ I3]*k
+
+						I3 é neutro na multiplicação de matrizes, e igual a 1 dos números reais.
+
+						M33(-1)= [M33(-1)*D3+ I3]*k
+
+						expandindo [M33(-1)*D3+ I3]*k  por: M33(-1)*D3*k+I3*k
+
+						mas I3*k=k
+
+						M33(-1)= M33(-1)*D3*k+ k
+
+						somando nos dois lados da equação por: -M33(-1)*D3*k
+
+						M33(-1)-M33(-1)*D3*k = M33(-1)*D3*k+k - M33(-1)*D3*k,
+
+						M33(-1)-M33(-1)*D3*k= k
+
+
+						ou, agrupando os elementos do lado esquerdo da equação.
+
+						M33(-1)*(I3-D3*k)=k
+
+						(I3+D3*k) é inversível, pela matriz diagonal secundária.
+
+						multiplicando os dois lados da equação por (I3+D3*k)(-1),
+
+						seja (I3-D3*k)=k3,
+
+						M33(-1)*k3=k
+
+						M33(-1)*k3*k3(-1)=k*k3(-1)
+
+						mas k3 é inversível também, por causa da matriz diagonal secundária, e k3*k3(-1)=I3
+
+
+
+						M33(-1)*I3=k*k3(-1),
+
+						M33(-1)=k*k3(-1),
+
+						com:
+							k= [D3+M33](-1),
+							k3= [I3-D3*k]
+
+						M33(-1) é a matriz de correção para transformações 3D-->2D-->3D, pois p3*M32*M23*M33(-1)=p3.
+
+
+						v3_final= v3_inicial*M32*M23*M33(-1),
+
+						e M32*M23<>I3,
+
+						v3_final= v3_inicial*M33*M33(-1).
+
+
+						M33*M33(-1)=I3, e M33=M32*M23
+
+						um caso semelhante é o número complexo i=sqrt(-1), que não existe nos números reais, mas possibilita o cálculo de raizes em polinômios,
+						inclusive resultando em raizes de números reais. Não existe, mas supondo que exista, resulta em soluções de polinômios.
+
+
+		----> a codificar o cálculo de M33(-1), que possibilitará em transformações 3d-->2d-->3d.
+
+____________________________________________________________________________________________________________________________________________________________________________________________________
